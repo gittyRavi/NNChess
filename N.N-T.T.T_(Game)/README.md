@@ -16,4 +16,4 @@ Run [`N.N-T.T.T_(Game).html`] to see it in action.
 
 ##Credits
 
-Credits gor this code go to [chazomaticus](https://github.com/chazomaticus) and [gittyRavi](https://github.com/gittyRavi) and [Siraj Raval](https://www.youtube.com/watch?v=0a-52ntK3T8)
+Credits for this code go to [chazomaticus](https://github.com/chazomaticus) and [gittyRavi](https://github.com/gittyRavi) and [Siraj Raval](https://www.youtube.com/watch?v=0a-52ntK3T8)
