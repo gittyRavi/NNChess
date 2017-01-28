@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title style="color: red;">NN_T*T*T</title>
+	<script src="bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="shortcut icon" href="beimagesicon.png" type="image/x-icon" />
+	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>beimagesicon.png" />
+	<link rel="apple-touch-icon" href="ios/AppIcon.appiconset/Icon-60@2x.png" />
+	<link rel="apple-touch-icon" sizes="180x180" href="ios/AppIcon.appiconset/Icon-60@3x.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="ios/AppIcon.appiconset/Icon-76.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="ios/AppIcon.appiconset/Icon-76@2x.png" />
+	<link rel="apple-touch-icon" sizes="58x58" href="ios/AppIcon.appiconset/Icon-Small@2x.png" />
+	<link rel="icon" href="003_neuron_neuronal_connections_neural_network_science_biology_medicine-512.png" type="image/png" sizes="48x48">
+    <style>
+      body {
+        font-size: 2em;
+        font-family: sans-serif;
+		width: 100%;
+		background-color:rgba(155,0,0,0.4);
+	  }
+      #play-area {
+        margin: 2em;
+      }
+      #settings, #controls {
+        margin: 1em;
+      }
+      #x-settings, #o-settings {
+        margin: 1ex;
+		color: white;
+      }
+      #status {
+        width: 300px;
+        text-align: center;
+      }
+      #copyright {
+        margin: 1em;
+        font-size: small;
+        text-align: center;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+  <div id="imgs"></div>
+  <center style="font-family: jokerman; color:green; margin-top;2em;"><u><h1><b><span style="color:red;">*</span>T<span style="color:red;">*</span>T<span style="color:red;">*</span>T<span style="color:red;">*</span></b></h1></u><br/><span style="color:blue;"><u>Tic.Tac.Toe....with.Neural.Network.Implementations</u></span></center>
+    <div id="play-area">
+	<center>
+      <canvas id="board" width="300" height="300" style="background-color:yellow; color:white; padding:2em;border-radius: 30%;"></canvas>
+      <div id="status"
+          data-empty="&nbsp;"
+          data-winner-x="X wins!"
+          data-winner-o="O wins!"
+          data-tie="Cat's game (its a draw)"
+          data-paused="AI paused"
+          data-thinking="Thinking..."
+      >&nbsp;</div>
+	  </center>
+    </div>
+	
+	<center>
+    <div id="settings">
+      <div id="x-settings" style="color: lightgreen;">
+	  <b>
+        1.Player(X):
+        <select id="x-control" style="color:brown; border-radius:10px;">
+          <option value="human" selected>Human</option>
+          <option value="ai-random">A.I-N.N.:Random</option>
+          <option value="ai-easy">A.I-N.N.:Easy</option>
+          <option value="ai-smart">A.I-N.N.:Smart</option>
+        </select>
+        <br><br/>
+        <textarea id="x-ai-neural-import"
+            placeholder="Select &quot;A.I: (Neural Net)&quot; &amp; to play with A.I cats.." style="border-radius:10px;"
+            disabled
+        ></textarea>
+      </div>
+      <div id="o-settings" style="color: lightgreen;">
+        2.Player(O):
+        <select id="o-control" style="color: brown; border-radius:10px;">
+          <option value="human" selected>Human</option>
+          <option value="ai-random">A.I-N.N.:Random</option>
+          <option value="ai-easy">A.I-N.N.:Easy</option>
+          <option value="ai-smart">A.I-N.N.:Smart</option>
+        </select>
+        <br><br/>
+        <textarea id="o-ai-neural-import"
+            placeholder="Select &quot;A.I: (Neural Net)&quot; &amp; to play with A.I cats.." style="border-radius:10px;"
+            disabled
+        ></textarea>
+		</b>
+      </div>
+    </div>
+	</center>
+	
+	<center>
+    <div id="controls" style="color:blue; border-radius:10%;">
+      <input id="pause" type="button" value="Pause A.I"
+          data-paused="Resume A.I" data-unpaused="Pause A.I" style="border-radius:10%;box-shadow: 5px 5px 5px #888888;">
+      <input id="step" type="button" value="Step A.I" style="border-radius:10%;box-shadow: 5px 5px 5px #888888;">
+      <input id="undo" type="button" value="Undo" style="border-radius:10%;box-shadow: 5px 5px 5px #888888;">
+      <input id="restart" type="button" value="Restart" style="border-radius:10%;box-shadow: 5px 5px 5px #888888;">
+    </div>
+	</center>
+	
+    <div id="copyright" style="color:red; margin-top:30%; font-family:jokerman;">
+	<b>
+      <br>
+      Created on 28/1/2017 by <a href="https://github.com/chazomaticus">gittyRavi</a>
+      <br>
+      Help used from <a href="https://github.com/chazomaticus">Chazomaticus</a>
+	</b>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+        crossorigin="anonymous"></script>
+    <script src="src/ttt.js"></script>
+    <script src="src/neural.js"></script>
+    <script src="src/ai.js"></script>
+    <script src="src/genetic.js"></script>
+    <script src="play.js"></script>
+  </body>
+</html>
