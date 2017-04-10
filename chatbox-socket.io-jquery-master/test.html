@@ -1,0 +1,45 @@
+<!-- The following line is essential for the "position: fixed" property to work correctly in IE -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>jquery.ui.chatbox</title>
+    <link rel="stylesheet" href="public/css/jquery-ui-1.8.16.custom.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="public/js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="public/js/jquery-ui-1.8.16.custom.min.js"></script>
+    <link type="text/css" href="public/css/jquery.ui.chatbox.css" rel="stylesheet" />
+    <script type="text/javascript" src="public/js/jquery.ui.chatbox.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+          var box = null;
+          $("#toggle").click(function(event, ui) {
+              if(box) {
+                  box.chatbox("option", "boxManager").toggleBox();
+              }
+              else {
+				  var user_me = prompt("Please enter your name");
+                  box = $("#chat_div").chatbox({id:user_me, 
+                                                user:{key : "value"},
+                                                title : "Chat Here",
+                                                messageSent : function(id, user, msg) {
+                                                    $("#log").append("<h3 style='color:white;font-weight:bold;'>"+ id + "<span style='color:green;font-weight:bold;'> <span style='color:orange;font-weight:bold;'>said:</span><i> " + msg + "</i></span></h3>");
+                                                    $("#chat_div").chatbox("option", "boxManager").addMsg(id, msg);
+                                                }});
+              }
+          });
+      });
+	  function hiding(){
+			document.getElementById("hid").style.display = "none";
+		}
+    </script>
+  </head>
+  <body>
+    <h2 style="color:red;background-color:rgba(255,255,255,0.5);border: solid 2px yellow;border-radius:20px;">&nbsp Your Chessy Chat BOX</h2>  <button style="border-radius:20px;background-color:rgba(0,0,0,0.7);color:white"
+    id="toggle" onclick="hiding();">Chat ON/OFF </button>
+    <div id="chat_div">
+    </div>
+    <div id="log" style="background-color:rgba(255,155,155,0.5);border: solid 2px green;border-radius:20px;">
+    </div>
+	<div id="hid"><h1 style="color:white;">Your Chat Appears Here...</h1></div>
+  </body>
+</html>
+
