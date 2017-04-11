@@ -5,9 +5,11 @@ $("#SetFen").click(function () {
 
 $('#TakeButton').click( function () {
 	if(GameBoard.hisPly > 0) {
-		TakeMove();
-		GameBoard.ply = 0;
-		SetInitialBoardPieces();
+		for(i=0;i<=1;i++){
+			TakeMove();
+			GameBoard.ply = 0;
+			SetInitialBoardPieces();
+		}
 	}
 });
 
